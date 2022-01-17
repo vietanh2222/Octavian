@@ -1,0 +1,33 @@
+.recent-blog{
+    margin-bottom: 7rem;
+}
+
+.blog-layout {
+    @include flex(center, center);
+    flex-direction: column;
+}
+
+.recent-blog__title {
+    max-width: 60rem;
+    text-align: center;
+    @include flex(center, center);
+    flex-direction: column;
+    & > h2 {
+        @include title-h2-style
+    }
+
+    & > p {
+        @include title-p-style
+    }
+}
+
+.recent-blog__cards {
+    @include flex(center, center);
+    gap: 0 3rem;
+}
+
+@include maxw(769px) {
+    .recent-blog{
+        margin-bottom: 1rem;
+    }
+}

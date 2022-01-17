@@ -1,0 +1,85 @@
+.infor {
+  background-image: url(../images/infor.png);
+  background-position: center center;
+  background-repeat: none;
+}
+
+.infor-layout {
+  @include flex(center, center);
+  flex-direction: column;
+  color: white;
+  padding: 15rem 0;
+}
+
+.infor__title {
+  max-width: 60rem;
+  text-align: center;
+  @include flex(center, center);
+  flex-direction: column;
+  & > h2 {
+    @include title-h2-style;
+  }
+
+  & > p {
+    @include title-p-style;
+  }
+}
+
+.infor__form {
+  width: 60rem;
+}
+
+.form-group {
+  @include flex();
+  flex-direction: column;
+  & > .form-control {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid white;
+    border-radius: 0.6rem;
+    background-color: transparent;
+    margin-bottom: 3rem;
+  }
+
+  & > .form-control:focus {
+    outline: 0;
+  }
+
+  ::placeholder {
+    color: white;
+    @include card-p-style;
+    margin-top: 0;
+  }
+  
+
+  & > .column-images__button {
+    & > button {
+      border-radius: 5px;
+      background-image: -moz-linear-gradient(
+        0deg,
+        rgb(244, 116, 162) 0%,
+        rgb(255, 173, 58) 100%
+      );
+      background-image: -webkit-linear-gradient(
+        0deg,
+        rgb(244, 116, 162) 0%,
+        rgb(255, 173, 58) 100%
+      );
+      background-image: -ms-linear-gradient(
+        0deg,
+        rgb(244, 116, 162) 0%,
+        rgb(255, 173, 58) 100%
+      );
+  
+      width: 27rem;
+      height: 6.5rem;
+      z-index: 78;
+    }
+  }
+}
+
+@include maxw(769px) {
+  .infor-layout {
+    padding: 8rem 0;
+  }
+}

@@ -1,0 +1,55 @@
+html {
+    font-size: 50%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: $gray;
+}
+
+//1440, 1170
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1210px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+}
+
+@include maxw(1025px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@include maxw(769px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@include maxw(470px) {
+    html {
+        font-size: 25%;
+    }
+}

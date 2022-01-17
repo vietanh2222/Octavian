@@ -1,0 +1,44 @@
+.column-images{
+    margin-bottom: 30rem;
+}
+
+.column-layout {
+    display: flex;
+    gap: 0 9rem;
+}
+
+.card__content {
+    height: 22.5rem;
+    max-width: 33rem;
+    word-wrap: break-word;
+    padding-top: 4rem;
+    &>h3{
+        @include card-h3-style
+    }
+    &>p{
+        @include card-p-style
+    }   
+}
+
+.column-images__button {
+    @include flex(center, center);
+    &>button{
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 600;
+        padding: 1.8rem 7.2rem;
+        border: none;
+        background-color: #4a44f2;
+        border-radius: 0.6rem;
+    }
+}
+
+
+@include maxw(769px) {
+    .column-images{
+        margin-bottom: 15rem;
+    }
+    .column-layout {
+        gap: 0 6rem;
+    }
+}

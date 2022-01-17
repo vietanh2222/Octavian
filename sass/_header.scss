@@ -1,0 +1,50 @@
+.header__top-nav {
+    @include flex(center, space-between);
+    height: 12rem;
+}
+
+.top-nav__logos {
+    @include flex(center);
+}
+
+.top-nav__logos > img {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1.6rem;
+}
+
+.top-nav__logos > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: $gray;
+}
+
+.links__item {
+    @include flex(center);
+
+    &>li{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6rem;
+        &>p{
+            font-weight: 300;
+        }
+        &>span{
+            font-weight: 600;
+            margin-left: 2rem;
+            font-size: 1.5rem;
+        }
+        &>ion-icon {
+            font-size: 2.4rem;
+            margin-left: 7.5rem;
+        }
+    }
+
+    &>li:last-child{
+        &>ion-icon{
+            border-radius: 0.2rem;
+            border: 1px solid;
+            padding: 0.4rem;
+            font-size: 2rem;
+        }
+    }
+}
